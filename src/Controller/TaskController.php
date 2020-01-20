@@ -26,8 +26,8 @@ class TaskController extends AbstractController
         //-----------------------------------------------------
 
         // otra prueba para sacar todos los usuarios y las tareas adjuntas
-        $user_repo = $this->getDoctrine()->getRepository(User::class);
-        $users = $user_repo->findAll();
+        // $user_repo = $this->getDoctrine()->getRepository(User::class);
+        // $users = $user_repo->findAll();
 
         // foreach ($users as $user) {
         //     echo "<h1> {$user->getName()} {$user->getSurName()} </h1>";

@@ -11,6 +11,8 @@ use App\Form\RegisterType;
 
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+
 class UserController extends AbstractController
 {
     public function register(Request $request, UserPasswordEncoderInterface $encoder)
@@ -45,5 +47,17 @@ class UserController extends AbstractController
         return $this->render('user/register.html.twig', [
             'form' => $form->createView(),
         ]);
+    }
+
+    public function login(AuthenticationUtils $authenticationUtils)
+    {
+        $error = $authenticationUtils->getLastAuthenticationError();
+
+        $lastUsername = $authenticationUtils->getLastUsername();
+
+        return $this->render('user/login.html.twig', array(
+            'error' => $error,
+            'last_username' => $lastUsername
+        ));
     }
 }
