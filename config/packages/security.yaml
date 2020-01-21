@@ -23,7 +23,7 @@ security:
 
       logout:
         path: /logout
-        target: /login
+        target: /
       # activate different ways to authenticate
       # https://symfony.com/doc/current/security.html#firewalls-authentication
       # https://symfony.com/doc/current/security/impersonating_user.html
@@ -33,4 +33,10 @@ security:
   # Note: Only the *first* access control that matches will be used
   access_control:
     # - { path: ^/admin, roles: ROLE_ADMIN }
-    # - { path: ^/profile, roles: ROLE_USER }
+    # - { path: ^/, roles: ROLE_USER }
+    - { path: ^/tareas, roles: ROLE_USER }
+    - { path: ^/tarea, roles: ROLE_USER }
+    - { path: ^/crear-tarea, roles: ROLE_USER }
+    - { path: ^/mis-tareas, roles: ROLE_USER }
+    - { path: ^/editar-tarea, roles: ROLE_USER }
+    - { path: ^/borrar-tarea, roles: ROLE_USER }
