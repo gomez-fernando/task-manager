@@ -8,6 +8,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Entity\User;
 use App\Form\RegisterType;
+use Symfony\Component\Security\Core\User\UserCheckerInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
@@ -51,9 +53,17 @@ class UserController extends AbstractController
 
     public function login(AuthenticationUtils $authenticationUtils)
     {
+        // if (true) {
+        //     return $this->redirectToRoute('tasks');
+        // }
         $error = $authenticationUtils->getLastAuthenticationError();
 
         $lastUsername = $authenticationUtils->getLastUsername();
+
+        // if ($error) {
+        //     return $this->redirectToRoute('tasks');
+        // }
+
 
         return $this->render('user/login.html.twig', array(
             'error' => $error,
