@@ -1,13 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Tareas{% endblock %}
+{% block title %}Tareas
+{% endblock %}
 
 {% block body %}
 
 <div class="example-wrapper">
-    <h2>Todas las tareas</h2>
+    {% if app.user != null %}
 
+    <h2>Todas las tareas</h2>
     {{ include('includes/task-list.html.twig') }}
+
+    {% else %}
+    <h2>Tienes que iniciar sesión</h2>
+    {% endif %}
 
 
 </div>
