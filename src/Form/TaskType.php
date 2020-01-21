@@ -30,7 +30,11 @@ class TaskType extends AbstractType
             'label' => 'Horas presupuestadas'
           ))
           ->add('submit', SubmitType::class, array(
-            'label' => 'Guardar'
+            'label' => 'Guardar',
+            'attr' => array(
+              'class' => 'btn btn-success mt-3',
+              'style' => 'margin-top: 9px'
+            )
     ))
     ;
     }

@@ -25,7 +25,11 @@ class RegisterType extends AbstractType
             'label' => 'Contraseña'
           ))
           ->add('submit', SubmitType::class, array(
-            'label' => 'Registrarse'
+            'label' => 'Registrarse',
+            'attr' => array(
+              'class' => 'btn btn-success mt-3',
+              'style' => 'margin-top: 9px'
+            )
     ))
     ;
     }

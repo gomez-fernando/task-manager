@@ -41,7 +41,7 @@ class UserController extends AbstractController
             $em->persist($user);
             $em->flush();
 
-            return $this->redirectToRoute('tasks');
+            return $this->redirectToRoute('login');
         }
 
         // var_dump($user);
