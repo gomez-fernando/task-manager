@@ -1,8 +1,4 @@
 tasks:
-  path: /
-  controller: App\Controller\TaskController::index
-
-tasks_1:
   path: /tareas
   controller: App\Controller\TaskController::index
 
@@ -31,7 +27,7 @@ register:
   controller: App\Controller\UserController::register
 
 login:
-  path: /login
+  path: /
   controller: App\Controller\UserController::login
 
 logout:
