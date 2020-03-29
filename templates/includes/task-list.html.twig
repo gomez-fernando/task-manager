@@ -25,10 +25,10 @@
 					</td>
 					<td>{{ task.hours }}</td>
 					<td class="buttons">
-						<a href="{{ path('task_detail', {'id':task.id}) }}" class="btn btn-success">Ver</a>
+						<a href="{{ path('task_detail', {'id':task.id}) }}" class="btn btn-outline-success">Ver</a>
 						{% if app.user != null and task.user.id == app.user.id %}
-							<a href="{{ path('task_edit', {'id':task.id}) }}" class="btn btn-warning">Editar</a>
-							<a href="{{ path('task_delete', {'id':task.id}) }}" class="btn btn-danger">Borrar</a>
+							<a href="{{ path('task_edit', {'id':task.id}) }}" class="btn btn-outline-warning">Editar</a>
+							<a href="{{ path('task_delete', {'id':task.id}) }}" class="btn btn-outline-danger">Borrar</a>
 						{% endif %}
 					</td>
 				</tr>

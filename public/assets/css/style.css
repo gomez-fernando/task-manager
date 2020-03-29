@@ -9,6 +9,11 @@ h1,
 h2 {
   text-shadow: -1px -1px 1px rgb(255, 255, 255), 1px -1px 1px rgb(255, 255, 255),
     -1px 1px 1px rgb(255, 255, 255), 1px 1px 1px rgb(255, 255, 255);
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin: 5px auto 20px auto;
+  /* display: inline; */
 }
 
 .clearfix {
@@ -73,6 +78,11 @@ html body div#header ul#menu li#no-hover.right a:hover {
   color: #444 !important;
 }
 
+html body div#header nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
 label {
   display: block;
   width: 80%;
@@ -122,7 +132,7 @@ table {
 
 table th,
 table td {
-  background-color: #f6f6f6;
+  background-color: #f8f9fa;
   padding: 15px;
   border-bottom: 1px solid #444;
   padding-right: 25px;
@@ -139,13 +149,13 @@ table td {
   width: 33%;
 }
 
-.buttons a {
+/* .buttons a {
   text-decoration: none;
   padding: 8px;
   color: white;
-}
+} */
 
-.buttons .btn-show {
+/* .buttons .btn-show {
   background-color: #00aa33;
   border: 1px solid #036420;
   border-radius: 5px;
@@ -161,7 +171,7 @@ table td {
   background-color: rgb(196, 9, 9);
   border: 1px solid rgb(104, 5, 5);
   border-radius: 5px;
-}
+} */
 
 .data-task {
   color: gray;

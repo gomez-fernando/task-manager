@@ -8,7 +8,11 @@
 <div class="example-wrapper">
     {% if app.user != null %}
 
-    <h2>Todas las tareas</h2>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h2>Todas las tareas</h2>
+        </div>
+    </div>
     {{ include('includes/task-list.html.twig') }}
 
     {% else %}
